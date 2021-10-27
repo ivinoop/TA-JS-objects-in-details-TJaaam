@@ -28,7 +28,7 @@ let singleQ = {
 
 function createQuestion (title, options, correctAnswerIndex) {
   let question = {};
-  question.title = 'title';
+  question.title = title;
   question.options = options;
   question.correctAnswerIndex = correctAnswerIndex;
   question.isAnswerCorrect = function (index) {
