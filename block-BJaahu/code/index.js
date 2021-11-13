@@ -1,13 +1,5 @@
 // Prototypal Pattern
 
-function quizData(title, options, correctAnswerIndex) {
-  let question = Object.create(quizMethods);
-  question.title = title;
-  question.options = options;
-  question.correctAnswerIndex = correctAnswerIndex;
-  return question;
-}
-
 let quizMethods = {
   getCorrectAnswer() {
     return this.options[this.correctAnswerIndex];
@@ -16,6 +8,15 @@ let quizMethods = {
     return index === this.correctAnswerIndex;
   }
 };
+
+function quizData(title, options, correctAnswerIndex) {
+  let question = Object.create(quizMethods );
+  question.title = title;
+  question.options = options;
+  question.correctAnswerIndex = correctAnswerIndex;
+  return question;
+}
+
 
 // Pseudoclassical Pattern
 
