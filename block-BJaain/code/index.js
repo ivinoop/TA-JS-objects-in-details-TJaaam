@@ -44,7 +44,7 @@ var myObject = {};
 myObject.someMethod = function () {
   console.log(this);
 };
-myObject.someMethod(); //Value Of This = undefined
+myObject.someMethod(); // {someMethod: ƒ}
 
 // ------------
 
@@ -78,8 +78,7 @@ let user = {
   },
 };
 
-user.foo(); // Simple function call
-// false
+user.foo(); // false
 let fun1 = user.foo1;
 fun1(); // true
 user.foo1(); // false
@@ -135,22 +134,22 @@ obj.getThis3 = obj.getThis.bind(obj);
 obj.getThis4 = obj.getThis2.bind(obj);
 
 // Output
-obj.getThis(); // Window object
+obj.getThis(); // window 
 
 // Output
 obj.getThis.call(a); // Window object
 
 // Output
-obj.getThis2(); // {getThis: ƒ, getThis2: ƒ, getThis3: ƒ, getThis4: ƒ}
+obj.getThis2(); // obj
 
 // Output
-obj.getThis2.call(a); // {a: 'a'}
+obj.getThis2.call(a); // a
 
 // Output
-obj.getThis3(); // Window object
+obj.getThis3(); // window
 
 // Output
-obj.getThis4(); // {getThis: ƒ, getThis2: ƒ, getThis3: ƒ, getThis4: ƒ}
+obj.getThis4(); // obj
 
 // -------------
 
@@ -164,7 +163,7 @@ let person = {
 person.greet(); // hello, Jay
 
 let greet = person.greet;
-greet(); // hello, 
+greet(); // hello,   
 
 // -------------
 
@@ -187,8 +186,8 @@ console.log(person.print()); // Jay Person
 let name1 = person.print;
 let name2 = person.details;
 
-console.log(name1()); // blank_output
-console.log(name2.print()); // Jay Details
+console.log(name1()); // ''
+console.log(name2.print()); // error
 
 // --------
 
@@ -213,7 +212,7 @@ let object = {
     console.log('this inside of outerFn double()');
     console.log(this);
     return this.data.map(function (item) {
-      console.log(this); // Output ???
+      console.log(this); // window
       return item * 2;
     });
   },
@@ -221,7 +220,7 @@ let object = {
     console.log('this inside of outerFn doubleArrow()');
     console.log(this);
     return this.dataDouble.map((item) => {
-      console.log(this); // Output ???
+      console.log(this); // object
       return item * 2;
     });
   },
@@ -241,7 +240,7 @@ function print() {
 }
 
 let printNameBob = print.bind(bobObj);
-console.log(printNameBob()); // output??
+console.log(printNameBob()); // Bob
 
 // -------------------
 
@@ -260,7 +259,7 @@ let obj2 = {
 };
 
 let getSecondData = obj2.printSecondData.bind(obj1);
-console.log(getSecondData()); // Output and why ???
+console.log(getSecondData()); // 1 --> because the first object is bound by the second object, so `this` will point to first object
 
 // --------------
 
@@ -271,7 +270,7 @@ const call = {
   },
 };
 
-call.says(); // output ???
+call.says(); // hey, mom just called
 
 // -----------------
 
@@ -284,7 +283,7 @@ const call = {
 
 let newCall = call.says;
 
-newCall(); // output ???
+newCall(); // Hey, undefined just called
 
 //  -----------------
 
@@ -302,4 +301,4 @@ const call = {
 
 let newCall = call.anotherCaller;
 
-newCall(); // output ??
+newCall(); // undefined called, too!
