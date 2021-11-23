@@ -70,4 +70,4 @@ function createCat(name, colorOfEyes, location, numberOfLegs) {
   cat.color = colorOfEyes;
   return cat;
 }
-Object.setPrototypeOf(catMethods, animalMethods)''
+Object.setPrototypeOf(catMethods, animalMethods);
