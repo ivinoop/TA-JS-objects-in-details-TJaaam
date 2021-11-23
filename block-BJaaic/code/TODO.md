@@ -1,6 +1,6 @@
 # Inheritance
 
-Convert the below requirements into inheritance using prototypal patters.
+Convert the below requirements into inheritance using prototypal pattern.
 
 #### Animal
 
@@ -35,7 +35,7 @@ Methods:
 
 #### Cat
 
-It will have all the properties and methods of the Animal. These are the extra properties and methods these dogs will have.
+It will have all the properties and methods of the Animal. These are the extra properties and methods these cats will have.
 
 Properties:
 
@@ -46,8 +46,8 @@ Methods:
 
 - `meow()` - alerts a message saying `I am ${name} and I can do mewo meow 😹`
 
-- `changeName(newName)` - accepts the name property and updates the name of the dog
+- `changeName(newName)` - accepts the name property and updates the name of the cat
 
-- `changeColorOfEyes(newColor)` - accepts the new color and updates the color of the dog
+- `changeColorOfEyes(newColor)` - accepts the new color and updates the color of the cat
 
 - `summary()` - returns `I am ${name} and the color of my eyes are ${colorOfEyes}. I can also do meow meow`
