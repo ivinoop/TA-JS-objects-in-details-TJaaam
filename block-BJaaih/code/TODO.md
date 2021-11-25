@@ -1,4 +1,4 @@
-In this assignment you have to add methods to the `prototype` of Array. Array is a constructor function and all the array methods like `map`, `forEach` and `filter` etc comes from `Array.prototyp`. So when you add a new method in `Array.prototype` the method gets added to all the instance of the array.
+In this assignment you have to add methods to the `prototype` of Array. Array is a constructor function and all the array methods like `map`, `forEach` and `filter` etc comes from `Array.prototype`. So when you add a new method in `Array.prototype` the method gets added to all the instance of the array.
 
 1. Create a function named `myMap` and add the method to `Array.prototype`. `myMap` will behave similar to how the `Array.map` works. To test the implementation use the code below.
 
