@@ -16,6 +16,7 @@ let user2 = {
     console.log(message + ' ' + this.username);
   },
 };
+
 let user3 = {
   username: 'Bran',
 };
@@ -29,8 +30,8 @@ function MainUser() {
 
 let userSayHello = user.sayHello;
 
-console.log(user.sayHello()); // output / error
-console.log(user2.sayHello()); // output / error
+console.log(user.sayHello()); // output / Hello John
+console.log(user2.sayHello()); // output / Hello Arya
 console.log(user.sayHello.call(user2)); // output / error
 console.log(user.sayHello.call(user2, 'Hey')); // output / error
 console.log(user.sayHello.apply(user2, ['Hey'])); // output / error
