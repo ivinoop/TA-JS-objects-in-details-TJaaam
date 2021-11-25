@@ -70,6 +70,9 @@ function PersonConstructor() {
   // add code here
   this.greet = function() {
     console.log(`Hello!`);
+  };
+  this.introduce = function() {
+    console.log(`Hi my name is ${this.name}`);
   }
 }
 
@@ -81,6 +84,7 @@ simon.greet(); // -> Logs 'hello'
 
 function PersonFromConstructor(name, age) {
   // add code here
+  let person = new PersonConstructor();
   person.name = name;
   person.age = age;
   return person;
