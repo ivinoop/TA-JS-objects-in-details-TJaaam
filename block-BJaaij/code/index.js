@@ -23,7 +23,7 @@ class Booklist {
   getCurrentBook() {
     return this.allBooks[this.readIndex];
   }
-  get getCurrentBook() {
+  getNextBook() {
     return this.allBooks[this.readIndex + 1];
   }
   getPrevBook() {
