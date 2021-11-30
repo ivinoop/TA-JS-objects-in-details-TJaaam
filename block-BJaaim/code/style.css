@@ -1,0 +1,148 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* General */
+
+html {
+  font-size: 16px;
+}
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.aic {
+  align-items: center;
+}
+
+.tac {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Custom Style */
+
+/* Header */
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: teal;
+  padding: 3rem 0;
+}
+
+/* Main */
+
+.quiz-container {
+  width: 900px;
+  background-color: rgb(48, 122, 168);
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 2rem;
+  color: #fff;
+}
+
+.btn-container {
+  padding-top: 3rem;
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+button {
+  margin: 0 2rem;
+  background-color: bisque;
+  padding: 0.6rem 1rem;
+  border: 0.3px solid bisque;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: rgb(238, 194, 139);
+  transition: 0.2s ease-in;
+}
+
+.submit {
+  padding: 0.8rem 1.3rem;
+  background-color: chocolate;
+  color: white;
+}
+
+.submit:hover {
+  background-color: green;
+  transition: 0.2s ease-in;
+}
